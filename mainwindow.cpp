@@ -21,7 +21,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     filePath_ = QDir::currentPath() + "/WordsList.txt";
-    logger.log(Logger::INFO, "filePath_: ", filePath_);
     ui->setupUi(this);
     ui->showfile->setText(filePath_);
     connect(ui->selectFile, &QPushButton::clicked, this, onSelectFileClicked); // нажал кнопку чтобы выбрать файл
